@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+//import { CommonModule } from '@angular/common';
 import { IonicModule, ModalController } from '@ionic/angular';
 
 import { CalendarModalOptions } from './calendar.model';
@@ -14,7 +14,7 @@ export function calendarController(modalCtrl: ModalController, calSvc: CalendarS
 }
 
 @NgModule({
-  imports: [CommonModule, IonicModule, FormsModule],
+  imports: [ IonicModule, FormsModule],
   declarations: CALENDAR_COMPONENTS,
   exports: CALENDAR_COMPONENTS,
   entryComponents: CALENDAR_COMPONENTS,
