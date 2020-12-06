@@ -4,8 +4,8 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2017"],
-    "module": "commonjs",
+    "lib": ["dom", "es2018"],
+    "module": "es2020",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noUnusedLocals": true,
@@ -13,7 +13,10 @@
     "outDir": "./dist",
     "removeComments": false,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es2015",
+    "baseUrl": "./src/components/",
+    "downlevelIteration": true,
+    "importHelpers": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["demo/", "dist/", "lazyload-demo/", "node_modules", "lib/"],
@@ -23,7 +26,8 @@
     "rewriteTsconfig": false
   },
   "angularCompilerOptions": {
-    "skipTemplateCodegen": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
     "strictMetadataEmit": true,
     "enableResourceInlining": true,
     "genDir": "./dist",
